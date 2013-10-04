@@ -291,7 +291,7 @@ static void updateHour(uint8_t tlcData[], uint8_t hour)
 static void setupTimer(void)
 {
 	CLK_Init(0);
-	TMR8_Tick_Init();
+	TMR8_Tick_Init(2, 0);
 
 	appTick.reload = APPLICATION_MS_TICK;
 	appTick.active = true;
